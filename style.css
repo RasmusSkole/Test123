@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%; /*selv forklarene*/
     height: 100vh; /*selv forklarene*/
-    background-image: url(/Img/background.png); /*sier hvem bilde som skal bli brukt som bakgrunn*/
+    background-image: url(Img/background.png); /*sier hvem bilde som skal bli brukt som bakgrunn*/
     background-size: cover; /*gjør som at backgrunnen dekker hele siden*/
     background-position: center; /*gjør at bakgrunnen er midt sentrert*/
     background-attachment: fixed; /*gjør at bakgrunns bilde ikke beveger på seg*/
