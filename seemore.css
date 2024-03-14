@@ -1,0 +1,216 @@
+*{
+    margin: 0; /*setter margin til 0 på nettsiden*/
+    padding: 0; /*setter padding til 0 på nettsiden*/
+    font-family: 'Poppins', sans-serif; /*velger hvem skrift type som blir brukt på nettsiden*/
+    box-sizing: border-box; 
+}
+html{
+    scroll-behavior: smooth; /*gjør at scrollinga blir smooth på nettsiden*/
+}
+body{
+    background: #080808; /*endrer bakgrunnsfargen til svart*/
+    color: #fff; /*gjør som at alt annet blir hvit*/
+}
+#header{
+    width: 100%; /*selv forklarene*/
+    height: 6vh; /*selv forklarene*/ 
+    background-size: cover;
+    background-position: center; /*gjør at bakgrunnen er midt sentrert*/
+    background-attachment: fixed; /*gjør at bakgrunns bilde ikke beveger på seg*/
+}
+.container{
+    padding: 10px 10%; /*legger til padding*/
+    margin-bottom: 1vh;
+}
+
+nav{
+    display: flex;
+    align-items: center; /*selv forklarene*/
+    justify-content: space-between; /*gjør at det blir jevn plass mellom ting*/
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 180px; /*selv forklarene*/
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px; /*selv forklarene*/
+}
+
+nav ul li a{
+    color: #fff; /*selv forklarene*/
+    text-decoration: none; /*selv forklarene*/
+    font-size: 18px; /*selv forklarene*/
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0; /*selv forklarene*/
+    height: 3px; /*selv forklarene*/
+    background: #ff004f; /*selv forklarene*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /*lengden av animationen*/
+}
+nav ul li a:hover::after{
+    width: 100%; /*selv forklarene*/
+}
+.header-text{
+    margin-top: 13%; /*selv forklarene*/
+    font-size: 30px; /*selv forklarene*/
+}
+.header-text h1{
+    font-size: 60px; /*selv forklarene*/
+    margin-top: 20px; /*selv forklarene*/
+}
+.header-text h1 span{
+    color: #ff004f; /*selv forklarene*/
+}
+/* -------portfolio----------- */
+#portfolio{
+    padding: 50px 0; /*selv forklarene*/
+}
+.work-list{ /*alt her har blitt komentert inne på style*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+   transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/* -----------------css for small screens--------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}

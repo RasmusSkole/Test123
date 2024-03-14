@@ -1,0 +1,289 @@
+*{
+    margin: 0; /*setter margin til 0 på nettsiden*/
+    padding: 0; /*setter padding til 0 på nettsiden*/
+    font-family: 'Poppins', sans-serif; /*velger hvem skrift type som blir brukt på nettsiden*/
+    box-sizing: border-box; /*gjør som at bokser er like store*/
+}
+html{
+    scroll-behavior: smooth; /*gjør at scrollinga blir smooth på nettsiden*/
+}
+body{
+    background: #080808; /*endrer bakgrunnsfargen til svart*/
+    color: #fff; /*gjør som at alt annet blir hvit*/
+}
+#header{
+    width: 100%; /*selv forklarene*/
+    height: 100vh; /*selv forklarene*/
+    background-image: url(/Img/background.png); /*sier hvem bilde som skal bli brukt som bakgrunn*/
+    background-size: cover; /*gjør som at backgrunnen dekker hele siden*/
+    background-position: center; /*gjør at bakgrunnen er midt sentrert*/
+    background-attachment: fixed; /*gjør at bakgrunns bilde ikke beveger på seg*/
+}
+.container{
+    padding: 10px 10%; /*legger til padding*/
+}
+
+nav{
+    display: flex;
+    align-items: center; /*selv forklarene*/
+    justify-content: space-between; /*gjør at det blir jevn plass mellom ting*/
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 180px; /*selv forklarene*/
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none; /*setter list stylen til none*/
+    margin: 10px 20px; /*selv forklarene*/
+}
+
+nav ul li a{
+    color: #fff; /*selv forklarene*/
+    text-decoration: none; /*selv forklarene*/
+    font-size: 18px; /*selv forklarene*/
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0; /*selv forklarene*/
+    height: 3px; /*selv forklarene*/
+    background: #ff004f; /*selv forklarene*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; /*lengden av animationen*/
+}
+nav ul li a:hover::after{
+    width: 100%; /*selv forklarene*/
+}
+.header-text{
+    margin-top: 13%; /*selv forklarene*/
+    font-size: 30px; /*selv forklarene*/
+}
+.header-text h1{
+    font-size: 60px; /*selv forklarene*/
+    margin-top: 20px; /*selv forklarene*/
+}
+.header-text h1 span{
+    color: #ff004f; /*selv forklarene*/
+}
+/* -----------about--------------- */
+#about{
+    padding: 80px 0; /*selv forklarene*/
+    color: #ababab; /*selv forklarene*/
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%; /*selv forklarene*/
+    border-radius: 15px; /*radiusen av borderen*/
+}
+.about-col-2{
+    flex-basis: 60%; 
+}
+
+.sub-title{
+    font-size: 60px; /*selv forklarene*/
+    font-weight: 600; 
+    color: #fff; /*selv forklarene*/
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px; /*selv forklarene*/
+}
+.tab-links{
+    margin-right: 50px; /*selv forklarene*/
+    font-size: 18px; /*selv forklarene*/
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0; /*selv forklarene*/
+    height: 3px; /*selv forklarene*/
+    background: #ff004f; /*selv forklarene*/
+    position: absolute;
+    left: 0; /*selv forklarene*/
+    bottom: -8px; /*selv forklarene*/
+    transition: 0.5s; 
+}
+
+.tab-links.active-link::after{
+    width: 50%; /*selv forklarene*/
+}
+
+.tab-contents ul li{
+    list-style: none; 
+    margin: 10px 0; /*selv forklarene*/
+}
+.tab-contents ul li span{
+    color: #b54769; /*selv forklarene*/
+    font-size: 14px; /*selv forklarene*/
+}
+.tab-contents{
+    display: none; 
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* -------portfolio----------- */
+#portfolio{
+    padding: 50px 0; /*selv forklarene*/
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*sier hvordan griden skal sette seg opp*/
+    grid-gap: 40px; /*bestemmer hvor langt unna firkantene i gridden skal være hverandre*/
+    margin-top: 50px; /*bestemmer hvor stor margin på toppen skal være*/
+}
+.work{
+    border-radius: 10px; /*setter radiusen til borderen*/
+    position: relative; /*gjør positioen relative*/
+    overflow: hidden; /*den skjuler scrollbars*/
+}
+.work img{
+    width: 100%; /*bestemmer størelssen*/
+    border-radius: 10px; /*størelsen på borderen*/
+    display: block; 
+    transition: transform 0.5s; /*bestemmer hvor lange animasjonen skal vare*/
+}
+.layer{ /*alt nedover her har blitt kommentert opp i dokumentet, eller sier seg selv hva det gjør*/
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+   transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* ---------contact-------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+.copyright a{
+    color: #ff004f;
+    text-decoration: none;
+}
+nav .fas{
+    display: none;
+}
+

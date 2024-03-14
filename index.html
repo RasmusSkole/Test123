@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!--refererer til css koden-->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <div id="header"> <!--gir dette stedet av dokumentet id, som gjør at du kan linke til det-->
+    <div class="container"> <!--refererer til containter inne på css dokumentet-->
+        <nav> <!--starten på headeren-->
+            <img src="/Img/logoPort.png" class="logo"> <!--refererer til logo bilde og kaller inn classen logo-->
+            <ul id="sidemenu"> <!--Begynelsen på de navigations linkene på høyre på headeren, referer også til sidemenu på css-->
+                <li><a href="#header">Home</a></li> <!--gjør at home knappen refererer til header delen av nettsiden-->
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i> <!--refererer til javascripten på bunnen av siden-->
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i> <!--refererer til javascripten på bunnen av siden-->
+        </nav>
+        <div class="header-text"> <!--kaller inn classen header-text-->
+            <p>IT guy</p> <!--tekst-->
+            <h1>Hi, I'm <span>Rasmus</span><br>Tolpinrud-Igelstad<br>from Norway</h1> <!--tekst-->
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about"> <!--gir dette stedet av dokumentet id, som gjør at du kan linke til det-->
+    <div class="container"> <!--kaller classen container-->
+        <div class="row"> <!--kaller classen row-->
+            <div class="about-col-1"> <!--kaller classen about-col-1-->
+                <img src="/Img/user.png"> <!--viser til hvem bilde som skal bli brukt-->
+            </div>
+            <div class="about-col-2"> <!--kaller classen about-col-2-->
+                <h1 class="sub-title">About Me</h1> <!--kaller classen sub-title-->
+                <p> <!--tekst-->
+                Hi, I'm an IT student at Hønefoss vidregående skole. I chose IT because I used to help people with their computer problems at my old school, 
+                and found it entertaining helping people. I'm looking forwards to getting into the working life, 
+                I have plenty of experience from my old school and vidregående. 
+                I also have experience in phone support in Gran kommune (vaksinetelefonen).
+                </p>
+
+                <div class="tab-titles"> <!--kaller inn classen tab-titles-->
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> <!--kaller til javascripten nederst på siden-->
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills"> <!--kaller til classen tab-contents active tab og gir dette stedet på nettsiden en id-->
+                    <ul>
+                        <li><span>Programming</span><br>HTML/CSS</li> <!--lager en liste over tekst-->
+                        <li><span>Adobe/editing software</span><br>Photoshop/Illustrator/Premiere Pro/Audition/Davinci Resolve</li>
+                        <li><span>Support</span><br>General troubleshooting/Computer maintance/Teaching</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>IT student at Hønefoss Vidregående skole</li>
+                        <li><span>2021 - 2022</span><br>Jevnaker skole (changed screens on laptops and did general support)</li>
+                        <li><span>2021 - 2021</span><br>Summerjob at Gran kommune (vaksinetelefonen)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>TBA</span><br>Informasjonsteknologi hønefoss vgs</li>
+                        <li><span>2022</span><br>Jevnaker Ungdomsskole</li>
+                        <li><span>2019</span><br>Toso Skole</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio"> <!--gir dette stedet av dokumentet id, som gjør at du kan linke til det-->
+    <div class="container"> <!--kaller classen container-->
+        <h1 class="sub-title">My Work</h1> <!--ting nedover har har blitt kommenter lengere opp-->
+        <div class="work-list">
+            <div class="work">
+                <img src="/Img/wordstor.png"> 
+                <div class="layer">
+                    <h3>Hardware guide</h3>
+                    <p>It's a guide about hardware</p>
+                    <a href="prosjekt 1.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/Img/vsstudio.png">
+                <div class="layer">
+                    <h3>Portfolio website</h3>
+                    <p>It's this website</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/Img/wordstor.png">
+                <div class="layer">
+                    <h3>Server guide</h3>
+                    <p>It's a guide about Windows server</p>
+                    <a href="prosjekt 3.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="seemore.html" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> datslegi@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 954 18 010</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/rasmus.tolpinrudigelstad.3/"><i class="fab fa-facebook"></i></a> <!--linker til sosiale medier og gjør at du får ikoner for de-->
+                    <a href="https://www.instagram.com/tolpinrudigelstad/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="/Img/CV.pdf" download class="btn btn2">Download CV</a> <!--gjør at du kan laste ned cv-en fra nettsiden-->
+            </div>
+   
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made with <i class="fas fa-heart"></i> by Rasmus</p>
+    </div>
+</div>
+
+<!--under her er javascript, er usikker på hvordan det fungerer siden fulgte en guide på hvordan man skulle gjøre det-->
+<script> 
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
